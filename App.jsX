@@ -8,7 +8,6 @@ function App() {
     <>
       <SafeAreaView>
         <HomeScreen />
-        <Text>hELLP</Text>
       </SafeAreaView>
     </>
   );
