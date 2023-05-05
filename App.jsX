@@ -1,13 +1,15 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
-import Entypo from 'react-native-vector-icons/Entypo';
+import {SafeAreaView} from 'react-native';
 import HomeScreen from './src/screens/Home';
+import Post from './src/components/Post';
 
-function App() {
+function App(props) {
+  console.log('Hello world');
   return (
     <>
       <SafeAreaView>
-        <HomeScreen />
+        {/* <HomeScreen /> */}
+        <Post />
       </SafeAreaView>
     </>
   );

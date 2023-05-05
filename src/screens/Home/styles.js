@@ -29,6 +29,30 @@ const styles = StyleSheet.create({
     color: '#000000',
     fontWeight: 'bold',
   },
+  textInput: {
+    height: 60,
+    width: '80%',
+    borderRadius: 10,
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'justify',
+    color: '#000000',
+  },
+  searchButton: {
+    width: '90%',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    marginTop: 40,
+    zIndex: 100,
+    backgroundColor: '#FFF',
+    alignItems: 'center',
+    borderRadius: 30,
+  },
+  searchIcon: {
+    paddingVertical: 10,
+  },
 });
 
 export default styles;
