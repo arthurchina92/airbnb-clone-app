@@ -11,14 +11,21 @@ export default function Post() {
           uri: 'https://www.pixelstalk.net/wp-content/uploads/2016/10/Photos-Apartment-HD.jpg',
         }}
       />
-      <Text>1 bed in one bedroom</Text>
-      <Text>
+      <Text style={styles.bedrooms}>1 bed in one bedroom</Text>
+      <Text style={styles.description} numberOfLines={2}>
         Lovely cozy apartment near to the mainstreet and principal attractions
+        Lorem Lorem ipsum stakdsknfksdnfkjnsdkfnsdnfsdnfnsdknfksdnfnsdfnsdf
+        dfkjnsdkfnsdnfkjsdnfjsndlfnsdlnflslksdfsd fmsd kfs vs kvj vsd vj
+        sdlfnsdfnlsdnflsdnldsnlsdn
       </Text>
-      <Text>Lorem ipzum has been the standard price</Text>
-      <Text>$36</Text>
-      <Text>$30</Text>
-      <Text>$250 total</Text>
+
+      <Text style={styles.prices}>
+        <Text style={styles.oldPrice}>$36</Text>
+        <Text style={styles.newPrice}> $30 </Text>
+        /Night
+      </Text>
+
+      <Text style={styles.totalPrice}>$250 total</Text>
     </View>
   );
 }
