@@ -24,9 +24,10 @@ const styles = StyleSheet.create({
   button: {
     height: 30,
     width: 30,
-    backgroundColor: 'grey',
     borderRadius: 15,
     alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#000000',
   },
   buttonText: {
     fontSize: 20,

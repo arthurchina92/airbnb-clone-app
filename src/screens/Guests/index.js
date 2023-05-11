@@ -1,8 +1,12 @@
-import {View, Text, Pressable} from 'react-native';
-import React from 'react';
+import {View, Text, Pressable, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
 import styles from './styles';
 
 export default function GuestsScreen() {
+  const [adults, setAdults] = useState(0);
+  const [children, setChildren] = useState(0);
+  const [infants, setInfants] = useState(0);
+
   return (
     <View style={styles.body}>
       <View style={styles.row}>
@@ -11,13 +15,55 @@ export default function GuestsScreen() {
           <Text style={styles.agesText}> Ages 13 or above </Text>
         </View>
         <View style={styles.pressableContainer}>
-          <Pressable style={styles.button}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setAdults(Math.max(0, adults - 1))}>
             <Text style={styles.buttonText}>-</Text>
-          </Pressable>
-          <Text style={styles.buttonText}> 0 </Text>
-          <Pressable style={styles.button}>
+          </TouchableOpacity>
+          <Text style={styles.buttonText}> {adults} </Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setAdults(adults + 1)}>
             <Text style={styles.buttonText}> + </Text>
-          </Pressable>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View>
+          <Text style={styles.adultsText}> Children</Text>
+          <Text style={styles.agesText}> Ages 2-12 </Text>
+        </View>
+        <View style={styles.pressableContainer}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setChildren(Math.max(0, children - 1))}>
+            <Text style={styles.buttonText}>-</Text>
+          </TouchableOpacity>
+          <Text style={styles.buttonText}> {children} </Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setChildren(children + 1)}>
+            <Text style={styles.buttonText}> + </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={styles.row}>
+        <View>
+          <Text style={styles.adultsText}> Infants</Text>
+          <Text style={styles.agesText}> Under 2 </Text>
+        </View>
+        <View style={styles.pressableContainer}>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setInfants(Math.max(0, infants - 1))}>
+            <Text style={styles.buttonText}>-</Text>
+          </TouchableOpacity>
+          <Text style={styles.buttonText}> {infants} </Text>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => setInfants(infants + 1)}>
+            <Text style={styles.buttonText}> + </Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
