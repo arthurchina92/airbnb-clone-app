@@ -1,7 +1,10 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  body: {},
+  body: {
+    height: '100%',
+    width: '100%',
+  },
   row: {
     margin: 20,
     flexDirection: 'row',
@@ -31,6 +34,20 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 20,
+  },
+  searchButton: {
+    height: 40,
+    width: '80%',
+    borderRadius: 10,
+    backgroundColor: 'red',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: 425,
+  },
+  searchText: {
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

@@ -66,6 +66,11 @@ export default function GuestsScreen() {
           </TouchableOpacity>
         </View>
       </View>
+      <View>
+        <Pressable style={styles.searchButton}>
+          <Text style={styles.searchText}>Search</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }

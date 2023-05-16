@@ -30,28 +30,24 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   textInput: {
-    height: 60,
-    width: '80%',
-    borderRadius: 10,
     fontWeight: 'bold',
     fontSize: 20,
-    textAlign: 'justify',
     color: '#000000',
+    textAlign: 'center',
+    marginRight: 50,
   },
   searchButton: {
+    height: 60,
     width: '90%',
     alignSelf: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     position: 'absolute',
     marginTop: 40,
     zIndex: 100,
     backgroundColor: '#FFF',
     alignItems: 'center',
     borderRadius: 30,
-  },
-  searchIcon: {
-    paddingVertical: 10,
   },
 });
 
