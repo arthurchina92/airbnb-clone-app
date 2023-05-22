@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import DestinationSearch from '../screens/DestinationSearch.js';
 import HomeTabNavigator from './HomeTabNavigator.js';
 import GuestsScreen from '../screens/Guests/index.js';
+import SearchResults from '../screens/Search/index.js';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,13 @@ export default function Router() {
           component={GuestsScreen}
           options={{
             title: 'Who´s traveling with you?',
+          }}
+        />
+        <Stack.Screen
+          name={'Search'}
+          component={SearchResults}
+          options={{
+            title: 'Search Screen',
           }}
         />
       </Stack.Navigator>

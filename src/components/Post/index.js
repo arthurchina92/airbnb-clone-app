@@ -3,24 +3,21 @@ import React from 'react';
 import styles from './styles';
 
 export default function Post(props) {
-  const post = props.post;
+  const {house} = props;
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={{uri: post.image}} />
+      <Image style={styles.image} source={{uri: house.images[0]}} />
       <Text style={styles.bedrooms}>
-        {post.bed} bed in {post.bedroom} bedroom
+        {house.beds} bed in {house.bedrooms} bedrooms
       </Text>
-      <Text style={styles.description} numberOfLines={2}>
-        {post.type}. {post.title}
+      <Text style={styles.description}>
+        {house.city}. {house.name}
       </Text>
 
       <Text style={styles.prices}>
-        <Text style={styles.oldPrice}>${post.oldPrice}</Text>
-        <Text style={styles.newPrice}> ${post.newPrice} </Text>
+        <Text style={styles.oldPrice}>${house.price.total}</Text>
         /Night
       </Text>
-
-      <Text style={styles.totalPrice}>${post.totalPrice} total</Text>
     </View>
   );
 }
