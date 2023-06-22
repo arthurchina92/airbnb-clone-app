@@ -71,7 +71,14 @@ export default function GuestsScreen() {
       <View>
         <Pressable
           style={styles.searchButton}
-          onPress={() => navigation.navigate('Search')}>
+          onPress={() =>
+            navigation.navigate('Home', {
+              screen: 'Explore',
+              params: {
+                screen: 'Search',
+              },
+            })
+          }>
           <Text style={styles.searchText}>Search</Text>
         </Pressable>
       </View>

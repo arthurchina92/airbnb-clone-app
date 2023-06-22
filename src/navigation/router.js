@@ -33,13 +33,6 @@ export default function Router() {
             title: 'Who´s traveling with you?',
           }}
         />
-        <Stack.Screen
-          name={'Search'}
-          component={SearchResults}
-          options={{
-            title: 'Search Screen',
-          }}
-        />
       </Stack.Navigator>
     </NavigationContainer>
   );
