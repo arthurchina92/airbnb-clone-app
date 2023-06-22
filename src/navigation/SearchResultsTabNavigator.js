@@ -7,10 +7,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const SearchResultsTabNavigator = () => {
   return (
-    <Tab.Navigator
-      tabBarOptions={{
-        activeTintcolor: 'red',
-      }}>
+    <Tab.Navigator screenOptions={{tabBarActiveTintColor: '#f15454'}}>
       <Tab.Screen name="List" component={SearchResults} />
       <Tab.Screen name="Map" component={SearchResults} />
     </Tab.Navigator>
