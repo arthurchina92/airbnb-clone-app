@@ -6,6 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import SuggestionRow from './SuggestionRow';
+import {API_KEY} from '@env';
 
 export default function DestinationSearch() {
   const [searchInput, setSearchInput] = useState('');
@@ -26,7 +27,7 @@ export default function DestinationSearch() {
           }}
           fetchDetails={true}
           query={{
-            key: 'AIzaSyBNiHC1OeNA2eZnRO0-TEz4jd3_wdsTRX0',
+            key: API_KEY,
             language: 'en',
             type: '(cities)',
           }}
