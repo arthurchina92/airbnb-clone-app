@@ -9,37 +9,28 @@ import SuggestionRow from './SuggestionRow';
 import {API_KEY} from '@env';
 
 export default function DestinationSearch() {
-  const [searchInput, setSearchInput] = useState('');
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <View style={{height: 500, width: '95%', alignSelf: 'center'}}>
-        <GooglePlacesAutocomplete
-          placeholder="Where are you going?"
-          onPress={(data, details = null) => {
-            // 'details' is provided when fetchDetails = true
-            console.log(data, details);
-            navigation.navigate('Guests');
-          }}
-          styles={{
-            textInput: styles.textInput,
-          }}
-          fetchDetails={true}
-          query={{
-            key: API_KEY,
-            language: 'en',
-            type: '(cities)',
-          }}
-          suppressDefaultStyles
-          renderRow={item => <SuggestionRow item={item} />}
-        />
-      </View>
-      <TextInput
-        style={styles.textInput}
+      <GooglePlacesAutocomplete
         placeholder="Where are you going?"
-        value={searchInput}
-        onChangeText={setSearchInput}
+        onPress={(data, details = null) => {
+          // 'details' is provided when fetchDetails = true
+          console.log(data, details);
+          navigation.navigate('Guests');
+        }}
+        styles={{
+          textInput: styles.textInput,
+        }}
+        fetchDetails={true}
+        query={{
+          key: API_KEY,
+          language: 'en',
+          type: '(cities)',
+        }}
+        suppressDefaultStyles
+        renderRow={item => <SuggestionRow item={item} />}
       />
     </View>
   );

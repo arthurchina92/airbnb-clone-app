@@ -1,7 +1,11 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {},
+  container: {
+    height: 500,
+    width: '95%',
+    alignSelf: 'center',
+  },
   textInput: {
     fontSize: 30,
     marginTop: 50,
